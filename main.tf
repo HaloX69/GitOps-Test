@@ -5,8 +5,8 @@ locals {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "gitopsdemo-tfstates-rg"
-    storage_account_name = "gitopsdemostore"
+    resource_group_name  = "GitOps-TFSStates-rg"
+    storage_account_name = "gitopsstore"
     container_name       = "gitopsdemotfstates"
     key                  = "gitopsdemo.tfstate"
   }
