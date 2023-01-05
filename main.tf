@@ -1,6 +1,6 @@
 locals {
   location = "eastus"
-  prefix   = "gitopsdemo"
+  prefix   = "10qpalzm29owskxn"
 }
 
 terraform {
@@ -29,7 +29,7 @@ resource "azurerm_resource_group" "main" {
 }
 
 resource "azurerm_storage_account" "main" {
-  name                     = "${local.prefix}storageacct"
+  name                     = "${local.prefix}sa"
   resource_group_name      = azurerm_resource_group.main.name
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"
@@ -52,7 +52,7 @@ resource "azurerm_service_plan" "main" {
 }
 
 resource "azurerm_linux_function_app" "main" {
-  name                = "${local.prefix}-function"
+  name                = "${local.prefix}-funcApp"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
 
