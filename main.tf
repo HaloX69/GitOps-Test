@@ -1,6 +1,6 @@
 locals {
   location = "eastus"
-  prefix   = "10qpalzm29owskxn"
+  prefix   = "10qpalzm29owskxn1969"
 }
 
 terraform {
