@@ -1,14 +1,14 @@
 locals {
   location = "eastus"
-  prefix   = "gitopsdemo"
+  prefix   = "10qpalzmxnskwo291969"
 }
 
 terraform {
   backend "azurerm" {
     resource_group_name  = "GitOps-TFSStates-rg"
     storage_account_name = "gitopsstore"
-    container_name       = "gitopsdemotfstates"
-    key                  = "gitopsdemo.tfstate"
+    container_name       = "10qpalzmxnskwo291969tfstates"
+    key                  = "10qpalzmxnskwo291969.tfstate"
   }
 
   required_providers {
@@ -29,7 +29,7 @@ resource "azurerm_resource_group" "main" {
 }
 
 resource "azurerm_storage_account" "main" {
-  name                     = "${local.prefix}storageacct"
+  name                     = "${local.prefix}sa"
   resource_group_name      = azurerm_resource_group.main.name
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"
@@ -52,7 +52,7 @@ resource "azurerm_service_plan" "main" {
 }
 
 resource "azurerm_linux_function_app" "main" {
-  name                = "${local.prefix}-function"
+  name                = "${local.prefix}-FuncApp"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
 
