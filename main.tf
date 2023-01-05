@@ -1,4 +1,4 @@
-		locals {
+locals {
   location = "eastus"
   prefix   = "gitopsdemo"
 }
