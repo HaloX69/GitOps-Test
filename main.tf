@@ -1,6 +1,6 @@
 locals {
   location = "eastus"
-  prefix   = "gitopsdemo"
+  prefix   = "10QPalZM29woskxn1969"
 }
 
 terraform {
