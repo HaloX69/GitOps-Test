@@ -1,5 +1,5 @@
 locals {
-  location = "uksouth"
+  location = "eastus"
   prefix   = "gitopsdemo"
 }
 
