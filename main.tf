@@ -52,7 +52,7 @@ resource "azurerm_service_plan" "main" {
 }
 
 resource "azurerm_linux_function_app" "main" {
-  name                = "${local.prefix}-FuncApp"
+  name                = "${local.prefix}-funcApp"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
 
